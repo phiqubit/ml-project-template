@@ -1,1 +1,12 @@
+experiment_name: "ml-template"
+
+model:
+  n_estimators: 200
+  max_depth: 8
+
+paths:
+  model_path: models/model.pkl
+
+mlflow:
+  tracking_uri: ${env:MLFLOW_TRACKING_URI, ''}
 

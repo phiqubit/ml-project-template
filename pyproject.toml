@@ -1,1 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml_project_template"
+version = "0.1.0"
+description = "Production-ready ML/DL template (Docker, K8s, FastAPI, Hydra, DVC, MLflow, CI/CD)"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 100
 

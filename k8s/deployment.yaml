@@ -1,3 +1,47 @@
 apiVersion: apps/v1
 kind: Deployment
-... (shortened for zip)
+metadata:
+  name: ml-api
+  labels:
+    app: ml-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ml-api
+  template:
+    metadata:
+      labels:
+        app: ml-api
+    spec:
+      containers:
+        - name: ml-api
+          image: REPLACE_WITH_REGISTRY_IMAGE  # replaced by CD workflow
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: MLFLOW_TRACKING_URI
+              valueFrom:
+                secretKeyRef:
+                  name: ml-secrets
+                  key: MLFLOW_TRACKING_URI
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ml-secrets
+stringData:
+  MLFLOW_TRACKING_URI: "http://mlflow.default.svc.cluster.local:5000"

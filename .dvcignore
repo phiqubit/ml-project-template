@@ -1,1 +1,4 @@
+# Ignore unnecessary files for DVC tracking
+*.tmp
+*.log
 

@@ -23,8 +23,8 @@ jobs:
 
       - name: Generate docs with pdoc
         run: |
-          pdoc --html src --output-dir docs --force
-          touch docs/.nojekyll  # ensures GitHub Pages serves correctly
+          pdoc --output-dir docs src
+          touch docs/.nojekyll # ensures GitHub Pages serves correctly
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

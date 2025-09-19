@@ -52,5 +52,5 @@ dvc-push:
 	dvc push
 
 docs:
-	pdoc --html src --output-dir docs --force
+	pdoc --output-dir docs src
 

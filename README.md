@@ -1,8 +1,8 @@
 # ML Project Template (Prod-Ready)
 
-[![CI](https://github.com/<your-username>/<repo-name>/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/<repo-name>/actions/workflows/ci.yml)
-[![Docker](https://github.com/<your-username>/<repo-name>/actions/workflows/docker.yml/badge.svg)](https://github.com/<your-username>/<repo-name>/actions/workflows/docker.yml)
-[![Docs](https://img.shields.io/badge/docs-pdoc-blue.svg)](https://<your-username>.github.io/<repo-name>/)
+[![CI](https://github.com/phiqubit/ml-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/<repo-name>/actions/workflows/ci.yml)
+[![Docker](https://github.com/phiqubit/ml-project-template/actions/workflows/docker.yml/badge.svg)](https://github.com/<your-username>/<repo-name>/actions/workflows/docker.yml)
+[![Docs](https://img.shields.io/badge/docs-pdoc-blue.svg)](https://phiqubit.github.io/ml-project-template/)
 
 One-command start for ML/DL projects with **Docker, K8s, FastAPI, Hydra, DVC, MLflow, and CI/CD**.
 

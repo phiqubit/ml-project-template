@@ -1,1 +1,20 @@
+stages:
+  prepare:
+    cmd: python -c "print('prepare stage placeholder')"
+    deps: []
+    outs:
+      - data/processed/
+
+  train:
+    cmd: python -m src.models.train
+    deps:
+      - src/models/train.py
+      - configs/config.yaml
+    outs:
+      - models/model.pkl
+
+  evaluate:
+    cmd: python -c "print('evaluate stage placeholder')"
+    deps:
+      - models/model.pkl
 

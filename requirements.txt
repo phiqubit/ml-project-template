@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+scikit-learn
+pandas
+numpy
+mlflow
+joblib
+pydantic
+pytest
+black
+isort
+ruff
+pre-commit
+dvc

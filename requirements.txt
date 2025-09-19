@@ -12,3 +12,6 @@ isort
 ruff
 pre-commit
 dvc
+hydra-core
+omegaconf
+pdoc

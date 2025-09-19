@@ -6,6 +6,32 @@ __pycache__/
 # C extensions
 *.so
 
+####### Add You Files/ Paths Here
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data / Models
+/data/
+/models/*.pt
+/models/*.pkl
+/mlruns/
+
+# DVC
+/.dvc/
+*.dvc
+.dvc/cache/
+
+# OS
+.DS_Store
+
+# Env
+.env
+
+#####################
+
+
 # Distribution / packaging
 .Python
 build/
